@@ -1,0 +1,136 @@
+.mainContainer {
+  margin-top: clamp(5em, 18vh, 8em);
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+h1 {
+  margin: 0.5em;
+  margin-bottom: 0;
+  font-size: 2.5em;
+  color: #5fe03f;
+}
+
+.noCards {
+  margin: auto;
+  letter-spacing: 1px;
+  line-height: 3em;
+  justify-self: center;
+  color: #d2fac8;
+}
+
+.container {
+  margin: 2.5em 3em;
+  margin-top: 2em;
+  padding: 1em 0;
+  min-height: max-content;
+  border: solid 2px #5fe03f;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  overflow-x: scroll;
+  color: #5fe03f;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-margin-bottom: 10em;
+}
+
+.container > * {
+  scroll-snap-align: center;
+}
+
+.containerWrap {
+  margin: 2.5em 3em;
+  margin-top: 2em;
+  padding: 1em 0;
+  min-height: max-content;
+  /* min-width: fit-content; */
+  border: solid 2px #5fe03f;
+  border-radius: 10px;
+  /* position: relative; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: #5fe03f;
+  scroll-margin-bottom: 10em;
+}
+
+.scrollLeft,
+.scrollRight {
+  margin: 1.5em;
+  padding: 0.5em;
+  color: #5fe03f;
+  background-color: #0d2606;
+  border: solid 2px #1f590e;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: border 0.3s ease-in-out;
+}
+
+.scrollLeft:hover,
+.scrollRight:hover,
+.down:hover {
+  cursor: pointer;
+  border: solid 2px #5fe03f;
+}
+
+.scrollLeft {
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.scrollRight {
+  right: 0;
+  transform: rotate(270deg);
+}
+
+.down {
+  padding: 0.5em;
+  color: #5fe03f;
+  background-color: #0d2606;
+  border: solid 2px #1f590e;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.75em;
+  left: 50%;
+
+  transition: border 0.3s ease-in-out;
+}
+
+.none {
+  display: none;
+}
+
+/* width */
+.container::-webkit-scrollbar {
+  height: 0.5em;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  width: 1em;
+  background: transparent;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: #1f590e;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #5fe03f;
+}

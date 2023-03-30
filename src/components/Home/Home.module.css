@@ -1,0 +1,173 @@
+.container {
+  margin-top: clamp(5em, 18vh, 8em);
+  padding: 0;
+  height: calc(99vh - 9em);
+
+  background: url(https://media.tenor.com/BgR83Df82t0AAAAi/portal-rick-and-morty.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20em auto;
+  overflow: hidden;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  animation: animatedBackground 0.8s ease-in-out;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-size: 0 auto;
+  }
+  to {
+    background-size: 20em auto;
+  }
+}
+
+.homeImg {
+  /* background-color: #fff; */
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  max-width: max-content;
+  height: auto;
+  max-height: 100%;
+
+  animation: rotates 1.5s ease-in-out;
+}
+
+@keyframes rotates {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.mortyFace {
+  position: absolute;
+  bottom: 0;
+  left: 10em;
+  opacity: 1;
+  height: min(25vh, 15vw);
+
+  /* transform: translateY(13vh); */
+  /* transition: transform 0.5s ease-in-out 0.2s; */
+  animation: appear 2s ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* .rickDance:hover ~ .mortyFace {
+  transform: translateY(0em);
+} */
+
+.rickDance {
+  position: absolute;
+  align-self: center;
+  /* bottom: 50%; */
+  left: 45%;
+  opacity: 0;
+
+  height: min(30vh, 20vw);
+
+  /* transform: translateY(30em); */
+  transition: transform 2s ease-in-out;
+  animation: scales 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scales {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* .homeImg:hover ~ .rickDance {
+  transform: translateY(-10vh);
+} */
+
+/* .cat {
+  position: absolute;
+  bottom: min(7em, 11vh);
+  right: min(2.5em, 7vw);
+
+  height: min(20vh, 15vw);
+
+  transform: translateY(30em);
+  transition: transform 2s ease-in-out;
+}
+
+.homeImg:hover ~ .cat {
+  transform: translateY(-7em);
+} */
+
+.butt {
+  position: absolute;
+  bottom: 0;
+  right: 5em;
+
+  height: min(20vh, 15vw);
+
+  /* transform: translateY(30em); */
+  transition: transform 2s ease-in-out;
+  animation: appear 3s ease-in-out;
+}
+
+/* .homeImg:hover ~ .butt {
+  transform: translateY(-5em);
+} */
+
+.buttTxt {
+  padding: 1em;
+  width: 12em;
+  background-color: #091a04;
+  border-radius: 10px;
+  border: solid 2px #1f590e;
+
+  font-family: "vox", sans-serif;
+  font-size: 1.2em;
+  word-break: break-word;
+  line-height: 1.2em;
+  color: #5fe03f;
+  display: none;
+
+  position: absolute;
+  right: 13em;
+  bottom: 8vh;
+
+  animation: scaled 0.5s ease-in-out;
+  animation-direction: alternate;
+}
+
+.butt:hover ~ .buttTxt {
+  display: block;
+}
+
+@keyframes scaled {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  z-index: 1;
+}
+
+.searchButton {
+  cursor: pointer;
+  margin: 0 2em;
+  margin-right: 0;
+  padding: 1em;
+  min-width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+  border: solid 2px #1f590e;
+  border-radius: 10px;
+  outline: none;
+
+  font-family: "vox", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #d2fac8;
+
+  transition: border 0.2s ease-in-out;
+}
+
+.searchButton:focus {
+  border: solid 2px #5fe03f;
+  color: #5fe03f;
+}
+
+.searchButton:hover {
+  border: solid 2px #5fe03f;
+  color: #5fe03f;
+}
+
+.inpSearch {
+  padding: 1em;
+  padding-left: 1em;
+  width: 7em;
+  background-color: black;
+  border: solid 2px #1f590e;
+  border-radius: 10px;
+  outline: none;
+
+  font-family: "vox", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #d2fac8;
+
+  transition: border 0.2s ease-in-out;
+}
+
+.inpSearch::-webkit-search-cancel-button {
+  display: none;
+  /*   position: relative;
+
+  -webkit-appearance: none;
+  background: url(../../assets/icons/x.svg);
+  height: 20px;
+  width: 20px;
+  border-radius: 10px; */
+}
+
+.inpSearch:focus {
+  border: solid 2px #5fe03f;
+}
+
+.inpSearch::placeholder {
+  color: #d2fac8b2;
+}

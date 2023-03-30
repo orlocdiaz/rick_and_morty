@@ -1,0 +1,149 @@
+.container {
+  margin: auto;
+  width: calc(100% - 6em);
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+@keyframes dropNav {
+  from {
+    transform: translateY(-30vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navBar {
+  padding: 0 2em;
+  height: min(8em, 18vh);
+  min-height: 5em;
+  width: inherit;
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  flex-flow: row;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  background: radial-gradient(#091a04, black);
+  /* background-color: #091a04; */
+  border: solid 2px #5fe03f;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  z-index: 2;
+
+  animation: dropNav 1.5s ease-in-out;
+}
+
+.linkHome {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+.imgContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.imgContainer img {
+  height: 100%;
+  width: auto;
+}
+
+.imgContainer img:hover {
+  animation: scaleLogo 0.8s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes scaleLogo {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: rotate(2deg);
+  }
+  66% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.linkMenu {
+  margin: 0 2%;
+  width: fit-content;
+
+  text-decoration: none;
+  align-self: center;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.buttonMenu {
+  cursor: pointer;
+  margin: 0;
+  margin-right: 0;
+  width: fit-content;
+  height: fit-content;
+
+  position: relative;
+
+  font-family: "vox", sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #d2fac8;
+
+  transition: transform 0.3s;
+}
+
+.buttonMenu:hover {
+  transform: scale(1.2);
+}
+
+.buttonMenu::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  display: block;
+  background: #5fe03f;
+  transition: width 0.3s ease-in-out;
+}
+
+.buttonMenu::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  display: block;
+  background: #5fe03f;
+  transition: width 0.3s ease-in-out;
+}
+
+.buttonMenu:hover::after {
+  width: 100%;
+}
+
+.buttonMenu:hover::before {
+  width: 100%;
+}
