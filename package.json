@@ -1,5 +1,6 @@
 {
   "name": "rick_and_morty",
+  "homepage": "https://orlocdiaz.github.io/rick_and_morty/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +17,6 @@
     "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://orlocdiaz.github.io/rick_and_morty",
   "scripts": {
     "start": "react-scripts start",
     "predeploy" : "npm run build",
