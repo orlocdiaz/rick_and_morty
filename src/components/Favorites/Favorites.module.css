@@ -4,9 +4,10 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
+  position: relative;
 }
 
-h1 {
+.title {
   margin: 0.5em;
   margin-bottom: 0;
   font-size: 2.5em;
@@ -20,7 +21,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   letter-spacing: 1px;
-  line-height: 3em;
   color: #d2fac8;
 
   text-align: justify;
@@ -31,7 +31,7 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: typing 0.5s ease-in-out;
+  animation: typing 0.5s ease-in-out 0.25s;
   animation-timing-function: steps(30, end);
   animation-fill-mode: forwards;
 }
@@ -81,12 +81,13 @@ h1 {
 }
 
 .match {
+  margin: 0;
   padding: 0.5em;
   border: #5fe03f 2px solid;
   border-radius: 10px;
   position: absolute;
-  top: 2em;
   left: 4em;
+  top: 3em;
   text-align: center;
   background-color: #091a04;
   color: #d2fac8;
@@ -103,8 +104,7 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: typing;
-  animation-duration: 0.5s;
+  animation: typing 0.5s ease-in-out 0.25s;
   animation-timing-function: steps(30, end);
   animation-fill-mode: forwards;
 }

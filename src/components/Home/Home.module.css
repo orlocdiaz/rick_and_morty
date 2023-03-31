@@ -93,25 +93,6 @@
   }
 }
 
-/* .homeImg:hover ~ .rickDance {
-  transform: translateY(-10vh);
-} */
-
-/* .cat {
-  position: absolute;
-  bottom: min(7em, 11vh);
-  right: min(2.5em, 7vw);
-
-  height: min(20vh, 15vw);
-
-  transform: translateY(30em);
-  transition: transform 2s ease-in-out;
-}
-
-.homeImg:hover ~ .cat {
-  transform: translateY(-7em);
-} */
-
 .butt {
   position: absolute;
   bottom: 0;
@@ -119,14 +100,9 @@
 
   height: min(20vh, 15vw);
 
-  /* transform: translateY(30em); */
   transition: transform 2s ease-in-out;
   animation: appear 3s ease-in-out;
 }
-
-/* .homeImg:hover ~ .butt {
-  transform: translateY(-5em);
-} */
 
 .buttTxt {
   padding: 1em;

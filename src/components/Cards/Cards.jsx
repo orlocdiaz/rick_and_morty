@@ -12,7 +12,7 @@ export default function Cards({
 }) {
   return (
     <div className={styles.mainContainer}>
-      <h1>Characters</h1>
+      <h1 className={styles.title}>Characters</h1>
       <div
         className={!wrap ? styles.container : styles.containerWrap}
         ref={forwardedRef}

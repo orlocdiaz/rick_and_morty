@@ -8,6 +8,7 @@ import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Form/Form.jsx";
 import axios from "axios";
 import Favorites from "./components/Favorites/Favorites.jsx";
+import Logout from "./components/Logout/Logout.jsx";
 
 // import characters from "./data.js";
 
@@ -31,6 +32,10 @@ function App() {
     } else {
       alert("User not found");
     }
+  }
+
+  function logOut(userData) {
+    console.log("Logout");
   }
 
   useEffect(() => {
@@ -79,6 +84,7 @@ function App() {
   return (
     <div className="App">
       {location.pathname !== "/" && <Nav onSearch={onSearch} />}
+      {location.pathname !== "/" && <Logout logOut={logOut} />}
       <Routes location={background || location}>
         <Route path="/" element={<Form login={login} />} />
         <Route path="/home" element={<Home />} />

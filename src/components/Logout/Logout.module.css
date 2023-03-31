@@ -1,0 +1,24 @@
+.logoutButton {
+  cursor: pointer;
+  padding: 0.3em;
+  width: fit-content;
+  border: 2px solid #1f590e;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+
+  position: fixed;
+  right: calc(2.4em - 22px);
+  top: clamp(calc(5em - 50px), calc(18vh - 50px), calc(8em - 50px));
+  color: #d2fac8;
+
+  animation: dropNav 1s ease-in-out;
+}
+
+@keyframes dropNav {
+  from {
+    transform: translateY(-30vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

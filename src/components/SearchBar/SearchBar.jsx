@@ -27,7 +27,7 @@ export default function SearchBar({ onSearch }) {
         }}
         value={ID}
         className={styles.inpSearch}
-        placeholder="Ex: 123"
+        placeholder="Search"
         maxLength="3"
       />
 

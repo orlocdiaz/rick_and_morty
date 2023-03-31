@@ -1,4 +1,118 @@
-.container h3{
-  font-size: 10em;
-  color: aliceblue;
+.container {
+  /* background-color: aqua; */
+  margin: 0 auto;
+  margin-top: clamp(5em, 18vh, 8em);
+  padding: 0;
+  width: calc(100% - 6em);
+  height: calc(100vh - clamp(5em, 18vh, 8em));
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin: 0.5em;
+  margin-bottom: 0;
+  font-size: 2.5em;
+  color: #5fe03f;
+}
+
+.infoContainer {
+  /* background-color: blanchedalmond; */
+  width: 50%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  height: 100%;
+}
+
+.aboutImg {
+  /* background-color: #fff; */
+  height: fit-content;
+  width: 50%;
+  text-align: end;
+  align-self: center;
+}
+
+.aboutImg > img {
+  width: max(100%, 15em);
+}
+
+.aboutInfo {
+  padding: 1%;
+  height: 100%;
+  width: 50%;
+  color: #d2fac8;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitleContainer {
+  /* background-color: gray; */
+  width: 70%;
+  /* height: 100%; */
+  margin: 2em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.subtitle1,
+.subtitle2,
+.subtitle3,
+.subtitle4,
+.subtitle5 {
+  margin: 0;
+  color: #d2fac8;
+  font-size: max(1.2em, 1vw);
+  font-weight: 500;
+  width: 0;
+  max-width: max-content;
+  overflow: hidden;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+.subtitle1 {
+  animation: 3s typing-erase steps(50, end);
+  animation-fill-mode: forwards;
+}
+.subtitle2 {
+  animation: 2.5s typing-erase steps(50, end);
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.subtitle3 {
+  animation: 2s typing-erase steps(50, end);
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+.subtitle4 {
+  animation: 3s typing-erase steps(50, end);
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+.ghLink {
+  text-decoration: none;
+}
+.subtitle5 {
+  display: flex;
+  align-items: center;
+  color: #5fe03f;
+  animation: 1s typing-erase steps(50, end);
+  animation-delay: 6.5s;
+  animation-fill-mode: forwards;
+}
+
+/* The type and erase effect */
+@keyframes typing-erase {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
