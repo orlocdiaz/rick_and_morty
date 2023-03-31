@@ -20,7 +20,6 @@ const Favorites = () => {
     dispatch(filterCards(event.target.value));
     setFilterActive(false);
     setMatch(event.target.value);
-    console.log(match);
   };
   useEffect(() => {
     for (let i = 0; i < favorites.length - 1; i++) {
@@ -36,11 +35,9 @@ const Favorites = () => {
       <h1>Favorites</h1>
       <div className={styles.containerWrap}>
         {!allFavorites.length ? (
-          <h2 className={styles.noCards}>
-            You have not selected your favorite characters
-            <br />
-            Go to the "characters" section to choose your favorite ones.
-          </h2>
+          <div className={styles.noCards}>
+            <h2 className={styles.lineOne}>Your favorites list is empty.</h2>
+          </div>
         ) : (
           <>
             {favorites.length ? (
@@ -52,7 +49,7 @@ const Favorites = () => {
                       width="30"
                       height="30"
                       fill="currentColor"
-                      class="bi bi-sort-down-alt"
+                      className="bi bi-sort-down-alt"
                       viewBox="0 0 16 16"
                     >
                       <path d="M3.5 3.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 12.293V3.5zm4 .5a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1h-1zm0 3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1h-3zm0 3a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1h-5zM7 12.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5z" />
@@ -63,7 +60,7 @@ const Favorites = () => {
                       width="30"
                       height="30"
                       fill="currentColor"
-                      class="bi bi-sort-down"
+                      className="bi bi-sort-down"
                       viewBox="0 0 16 16"
                     >
                       <path d="M3.5 2.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 11.293V2.5zm3.5 1a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zM7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z" />
@@ -92,7 +89,7 @@ const Favorites = () => {
                 width="30"
                 height="30"
                 fill="currentColor"
-                class="bi bi-filter"
+                className="bi bi-filter"
                 viewBox="0 0 16 16"
               >
                 <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />

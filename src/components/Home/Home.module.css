@@ -1,7 +1,7 @@
 .container {
   margin-top: clamp(5em, 18vh, 8em);
   padding: 0;
-  height: calc(99vh - 9em);
+  height: calc(100vh - clamp(5em, 18vh, 8em));
 
   background: url(https://media.tenor.com/BgR83Df82t0AAAAi/portal-rick-and-morty.gif);
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: flex-start;
 
-  animation: animatedBackground 0.8s ease-in-out;
+  animation: animatedBackground 0.7s ease-in-out;
 }
 
 @keyframes animatedBackground {
@@ -28,7 +28,6 @@
 }
 
 .homeImg {
-  /* background-color: #fff; */
   margin: auto;
   padding: 0;
   width: 100%;
@@ -36,31 +35,30 @@
   height: auto;
   max-height: 100%;
 
-  animation: rotates 1.5s ease-in-out;
+  animation: rotates 1s ease-in-out;
 }
 
 @keyframes rotates {
   0% {
-    transform: scale(0) rotate(0deg);
+    transform: scale(0);
   }
   75% {
-    transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2);
   }
   100% {
-    transform: scale(1) rotate(360deg);
+    transform: scale(1);
   }
 }
 
 .mortyFace {
   position: absolute;
   bottom: 0;
-  left: 10em;
+  left: 10vw;
   opacity: 1;
   height: min(25vh, 15vw);
+  min-height: 7em;
 
-  /* transform: translateY(13vh); */
-  /* transition: transform 0.5s ease-in-out 0.2s; */
-  animation: appear 2s ease-in-out;
+  animation: appear 1s ease-in-out;
 }
 
 @keyframes appear {
@@ -72,29 +70,22 @@
   }
 }
 
-/* .rickDance:hover ~ .mortyFace {
-  transform: translateY(0em);
-} */
-
 .rickDance {
   position: absolute;
   align-self: center;
-  /* bottom: 50%; */
-  left: 45%;
+  left: 40vw;
   opacity: 0;
 
-  height: min(30vh, 20vw);
+  height: min(30vh, 21vw);
+  min-height: 10em;
 
-  /* transform: translateY(30em); */
-  transition: transform 2s ease-in-out;
-  animation: scales 0.8s ease-in-out;
+  animation: scales 01s ease-in-out;
   animation-fill-mode: forwards;
 }
 
 @keyframes scales {
   0% {
     transform: scale(0);
-    opacity: 0;
   }
   100% {
     transform: scale(1);

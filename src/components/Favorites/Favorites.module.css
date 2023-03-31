@@ -4,7 +4,6 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-  position: relative;
 }
 
 h1 {
@@ -16,16 +15,41 @@ h1 {
 
 .noCards {
   margin: auto;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   letter-spacing: 1px;
   line-height: 3em;
-  justify-self: center;
   color: #d2fac8;
+
+  text-align: justify;
+  text-justify: auto;
+}
+
+.noCards > .lineOne {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 0.5s ease-in-out;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .containerWrap {
   margin: 2.5em 3em;
   margin-top: 2em;
-  padding: 1em 0;
+  padding: 1.25em 0;
+  /* padding-bottom: 1.5em; */
   min-height: max-content;
   border: solid 2px #5fe03f;
   border-radius: 10px;
@@ -75,6 +99,25 @@ h1 {
   align-items: center;
 }
 
+.noMatch > h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .filterIcon {
   cursor: pointer;
   padding: 0.3em;
@@ -115,6 +158,8 @@ h1 {
   right: 4.5em;
   transform: rotate(45deg);
   z-index: 3;
+
+  animation: displayFilter 0.3s ease-in-out;
 }
 
 .filterMenu {
@@ -135,11 +180,30 @@ h1 {
   color: #d2fac8;
   text-align: left;
 
+  overflow-x: hidden;
+
   z-index: 2;
+
+  animation: displayFilter 0.3s ease-in-out;
+}
+
+@keyframes displayFilter {
+  from {
+    opacity: 0;
+    width: 0;
+  }
 }
 
 .filterMenu > option {
   cursor: pointer;
+
+  animation: appear 0.75s ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(-10em);
+  }
 }
 
 .filterMenu > option::before {
@@ -150,7 +214,7 @@ h1 {
   height: 0.5em;
   left: 0;
   display: inline-block;
-  background: #5fe03f;
+  background: #1f590e;
   transform: rotate(45deg);
 
   transition: width 0.3s ease-in-out;

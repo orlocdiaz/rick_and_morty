@@ -9,7 +9,7 @@ const Nav = ({ onSearch }) => {
   return (
     <div className={styles.container}>
       <div className={styles.navBar}>
-        <NavLink to="/" className={styles.linkHome}>
+        <NavLink to="/home" className={styles.linkHome}>
           <div className={styles.imgContainer}>
             <img
               src="https://1000marcas.net/wp-content/uploads/2022/04/Rick-and-Morty.png"

@@ -1,11 +1,22 @@
 .mainContainer {
+  margin: 0 auto;
   margin-top: clamp(5em, 18vh, 8em);
   padding: 0;
+  width: calc(100% - 6em);
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-  position: relative;
+
+  /*   overflow-y: hidden;
+  animation: expand 0.5s ease-in-out;
+  animation-fill-mode: forwards; */
 }
+
+/* @keyframes expand {
+  from {
+    width: 0;
+  }
+} */
 
 h1 {
   margin: 0.5em;
@@ -16,16 +27,41 @@ h1 {
 
 .noCards {
   margin: auto;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   letter-spacing: 1px;
   line-height: 3em;
-  justify-self: center;
   color: #d2fac8;
+
+  text-align: justify;
+  text-justify: auto;
+}
+
+.noCards > .lineOne {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 0.5s ease-in-out;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .container {
-  margin: 2.5em 3em;
   margin-top: 2em;
+  margin-bottom: 2.5em;
   padding: 1em 0;
+  width: 100%;
   min-height: max-content;
   border: solid 2px #5fe03f;
   border-radius: 10px;
@@ -44,14 +80,13 @@ h1 {
 }
 
 .containerWrap {
-  margin: 2.5em 3em;
   margin-top: 2em;
-  padding: 1em 0;
-  min-height: max-content;
-  /* min-width: fit-content; */
+  margin-bottom: 2.5em;
+  padding: 1.25em 0;
+  /* padding-bottom: 1.5em; */
+  /* min-height: max-content; */
   border: solid 2px #5fe03f;
   border-radius: 10px;
-  /* position: relative; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -86,12 +121,29 @@ h1 {
 .scrollLeft {
   left: 0;
   transform: rotate(90deg);
+
+  /*   opacity: 0;
+  animation: move 0.5s ease-in-out 0.5s;
+  animation-fill-mode: forwards; */
 }
 
 .scrollRight {
   right: 0;
   transform: rotate(270deg);
+
+  /*   opacity: 0;
+  animation: move 0.5s ease-in-out 0.5s;
+  animation-fill-mode: forwards; */
 }
+
+/* @keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
 
 .down {
   padding: 0.5em;
@@ -106,14 +158,16 @@ h1 {
   bottom: 0.75em;
   left: 50%;
 
-  transition: border 0.3s ease-in-out;
+  /*   opacity: 0;
+  animation: move 0.5s ease-in-out 0.5s;
+  animation-fill-mode: forwards; */
 }
 
 .none {
   display: none;
 }
 
-/* width */
+/* height */
 .container::-webkit-scrollbar {
   height: 0.5em;
 }

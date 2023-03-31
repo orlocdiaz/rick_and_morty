@@ -18,13 +18,47 @@ export default function Cards({
         ref={forwardedRef}
       >
         {!characters.length ? (
-          <h2 className={styles.noCards}>
-            Please enter a number to search for a character.
-            <br />
-            Or click "Random" to find a random one.
-          </h2>
+          <div className={styles.noCards}>
+            <h2 className={styles.lineOne}>Your characters list is empty.</h2>
+          </div>
         ) : (
           <>
+            <div className={styles.down} onClick={wrapToggle}>
+              {wrap ? (
+                <svg
+                  transform="rotate(180)"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#d2fac8"
+                  strokeWidth="0.8"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  className="bi bi-chevron-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#d2fac8"
+                  strokeWidth="0.8"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  className="bi bi-chevron-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              )}
+            </div>
             {!wrap && (
               <>
                 <div
@@ -88,42 +122,6 @@ export default function Cards({
               );
             })}
           </>
-        )}
-      </div>
-      <div className={styles.down} onClick={wrapToggle}>
-        {wrap ? (
-          <svg
-            transform="rotate(180)"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#d2fac8"
-            strokeWidth="0.8"
-            width="25"
-            height="25"
-            fill="currentColor"
-            className="bi bi-chevron-down"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fillRule="evenodd"
-              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-            />
-          </svg>
-        ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#d2fac8"
-            strokeWidth="0.8"
-            width="25"
-            height="25"
-            fill="currentColor"
-            className="bi bi-chevron-down"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fillRule="evenodd"
-              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-            />
-          </svg>
         )}
       </div>
     </div>

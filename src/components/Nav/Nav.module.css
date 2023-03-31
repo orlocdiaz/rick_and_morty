@@ -8,15 +8,6 @@
   align-items: center; */
 }
 
-@keyframes dropNav {
-  from {
-    transform: translateY(-30vh);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
 .navBar {
   padding: 0 2em;
   height: min(8em, 18vh);
@@ -36,7 +27,16 @@
   border-radius: 0 0 10px 10px;
   z-index: 2;
 
-  animation: dropNav 1.5s ease-in-out;
+  animation: dropNav 1s ease-in-out;
+}
+
+@keyframes dropNav {
+  from {
+    transform: translateY(-30vh);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .linkHome {
@@ -108,7 +108,7 @@
 
   font-family: "vox", sans-serif;
   font-weight: 400;
-  font-size: 1.3em;
+  font-size: max(0.8vw, 1em);
   color: #d2fac8;
 
   transition: transform 0.3s;
