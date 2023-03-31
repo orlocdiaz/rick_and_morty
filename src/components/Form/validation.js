@@ -1,4 +1,4 @@
-export const validation = (userData, errors, setErrors) => {
+export const validation = (userData, errors) => {
   if (!userData.email) {
     errors.email = "Please enter your email";
   } else {
