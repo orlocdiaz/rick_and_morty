@@ -223,3 +223,33 @@ hr {
   margin: 0.8em;
   border: solid 1px #1f590e;
 }
+
+/* @media (max-width: 720px) {
+  .card {
+    flex-flow: row;
+  }
+
+  .nameTitle {
+    font-size: 1em;
+  }
+
+  .imgContainer img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .link {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .seeDetails {
+    padding: 0;
+  }
+
+  .seeDetails svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+ */

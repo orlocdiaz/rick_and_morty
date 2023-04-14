@@ -3,6 +3,7 @@ import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./actions";
 const initialState = {
   myFavorites: [],
   allCharacters: [],
+  filterGender: "",
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -36,7 +37,12 @@ const rootReducer = (state = initialState, action) => {
     case REMOVE_FAV:
       return {
         ...state,
-        myFavorites: action.payload,
+        myFavorites:
+          state.filterGender === "" || state.filterGender === "All"
+            ? action.payload
+            : action.payload.filter(
+                (element) => element.gender === state.filterGender
+              ),
         allCharacters: action.payload,
       };
     case FILTER:
@@ -44,6 +50,7 @@ const rootReducer = (state = initialState, action) => {
         return {
           ...state,
           myFavorites: state.allCharacters,
+          filterGender: action.payload,
         };
       } else {
         return {
@@ -51,6 +58,7 @@ const rootReducer = (state = initialState, action) => {
           myFavorites: state.allCharacters.filter(
             (char) => char.gender === action.payload
           ),
+          filterGender: action.payload,
         };
       }
     case ORDER:

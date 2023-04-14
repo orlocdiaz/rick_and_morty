@@ -80,6 +80,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-content: space-between;
   color: #5fe03f;
   scroll-margin-bottom: 10em;
 }
@@ -178,3 +179,28 @@
 .container::-webkit-scrollbar-thumb:hover {
   background: #5fe03f;
 }
+
+/* @media (max-width: 720px) {
+  .mainContainer {
+    margin: 0;
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    background-color: red;
+    flex-flow: column;
+  }
+
+  .containerWrap {
+    width: 100%;
+    background-color: red;
+    flex-flow: column;
+  }
+
+  .scrollLeft,
+  .scrollRight,
+  .down {
+    display: none;
+  }
+} */
